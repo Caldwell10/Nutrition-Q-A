@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.result {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.distance {
+    font-size: 0.9em;
+    color: gray;
+}
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: gray;
+}
