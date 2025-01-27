@@ -7,31 +7,29 @@
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <h1>Nutrition Q&A System</h1>
-    <form method="POST">
-        <input type="text" name="query" placeholder="e.g., What foods are high in protein?" required>
-        <button type="submit">Search</button>
-    </form>
+    <main>
+        <h1>Nutrition Q&A System</h1>
+        <form method="POST">
+            <input type="text" name="query" placeholder="e.g., What foods are high in protein?" required>
+            <button type="submit">Search</button>
+        </form>
 
-    <!-- Jinja2 engine to check if results are available -->
-    {% if results %}
-        <h2>Top Results:</h2>
-        <div>
-            <!-- Loop through the results list -->
-            {% for result in results %}
-                <div class="result">
-                    <!-- Display the text of each result -->
-                    <p>{{ result.text }}</p>
-                    <!-- Display the distance (similarity score) for each result -->
-                    <p class="distance">Distance: {{ result.distance }}</p>
-                </div>
-            {% endfor %}
-        </div>
-    {% else %}
-        <!-- Display if no results are found -->
-        <h2>No results found for your query. Please try a different search.</h2>
-    {% endif %}
+        <!-- Jinja2: Display results dynamically -->
+        {% if results %}
+            <h2>Top Results:</h2>
+            <div>
+                {% for result in results %}
+                    <div class="result">
+                        <p>{{ result.text }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h2>No results found for your query. Please try a different search.</h2>
+        {% endif %}
+    </main>
 
+    <!-- Footer -->
     <footer>
         © 2025 Nutrition Q&A System | Powered by FAISS and Flask
     </footer>
